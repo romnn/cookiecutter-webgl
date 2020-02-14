@@ -1,0 +1,31 @@
+body
+    overflow: hidden
+
+.custom
+    font-size: 0.8rem
+
+    .accent, a
+        text-decoration: underline
+        &:hover
+            color: #00bfa5
+
+    & *    
+        z-index: 99999999
+        color: white
+        overflow: visible
+        font-family: "Droid Sans Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace
+        margin: 0
+        padding: 0
+    
+    .info
+        color: white
+        position: absolute
+        text-align: left
+        background-color: rgba(0, 0, 0, 0.3)
+        bottom: 0
+        padding: 0.5rem
+
+#main-canvas
+    position: absolute
+    height: 100%
+    width: 100%
