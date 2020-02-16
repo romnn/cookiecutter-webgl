@@ -22,7 +22,7 @@ jobs:
       - python3 -m pip install --user cookiecutter invoke
       # - invoke generate
       # cookiecutter --default-config
-      - cookiecutter . --no-input
+      - python3 -m cookiecutter . --no-input
     script: cd cookiecutter-webgl && yarn && yarn build && mkdir out && cp -r dist out/ && cp index.html out/ && touch out/.nojekyll
     # - pipenv install --clear --dev --skip-lock
     # python: 3.6
