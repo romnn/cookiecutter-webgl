@@ -5,6 +5,9 @@ python:
 - 3.7
 - 3.6
 
+os: linux
+language: python
+
 jobs:
   include:
   - stage: deploy
@@ -15,7 +18,7 @@ jobs:
     install:
       - yarn
     before_script:
-      - pip install -U cookiecutter
+      - pip install cookiecutter
       - invoke generate
       # - cookiecutter ./ --default-config
     script: cd cookiecutter-webgl && yarn && yarn build && mkdir out && cp -r dist out/ && cp index.html out/ && touch out/.nojekyll
