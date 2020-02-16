@@ -18,7 +18,7 @@ jobs:
     install:
       - yarn
     before_script:
-      - pip install cookiecutter
+      - pip install --user cookiecutter invoke
       - invoke generate
       # - cookiecutter ./ --default-config
     script: cd cookiecutter-webgl && yarn && yarn build && mkdir out && cp -r dist out/ && cp index.html out/ && touch out/.nojekyll
