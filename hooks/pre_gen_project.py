@@ -8,7 +8,9 @@ try:
 except ImportError:
     print("Installing npm-package-validator...")
     subprocess.check_output(
-        "python3 -m pip install --no-cache-dir npm-package-validator", stderr=subprocess.STDOUT, shell=True
+        "python3 -m pip install --no-cache-dir npm-package-validator",
+        stderr=subprocess.STDOUT,
+        shell=True,
     )
 
     try:
@@ -23,7 +25,11 @@ package_name = "{{cookiecutter.project_slug}}"
 
 errors, warnings = validate_package(package_name)
 if not valid_new_package(package_name):
-    print("ERROR: The project slug ({}) is not a valid npm package name.".format(package_name))
+    print(
+        "ERROR: The project slug ({}) is not a valid npm package name.".format(
+            package_name
+        )
+    )
     for issue in errors + warnings:
         print("HINT: {}".format(issue))
 

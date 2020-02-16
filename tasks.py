@@ -4,13 +4,14 @@ import webbrowser
 import platform
 from invoke import task
 from pathlib import Path
+
 Path().expanduser()
 
 ROOT_DIR = Path(__file__).parent
-DOCS_DIR = ROOT_DIR.joinpath('docs')
-DOCS_BUILD_DIR = DOCS_DIR.joinpath('build')
-DOCS_INDEX = DOCS_BUILD_DIR.joinpath('index.html')
-TEST_DIR = ROOT_DIR.joinpath('tests')
+DOCS_DIR = ROOT_DIR.joinpath("docs")
+DOCS_BUILD_DIR = DOCS_DIR.joinpath("build")
+DOCS_INDEX = DOCS_BUILD_DIR.joinpath("index.html")
+TEST_DIR = ROOT_DIR.joinpath("tests")
 
 
 @task
@@ -29,12 +30,16 @@ def generate(c):
     c.run("pipenv run cookiecutter {} --no-input".format(ROOT_DIR))
 
 
-@task(help={'output': "Generated documentation output format (default is html)"})
+@task(help={"output": "Generated documentation output format (default is html)"})
 def docs(c, output="html"):
     """Generate documentation
     """
     c.run("pipenv run sphinx-apidoc -o {} .".format(DOCS_DIR))
-    c.run("pipenv run sphinx-build -b {} {} {}".format(output.lower(), DOCS_DIR, DOCS_BUILD_DIR))
+    c.run(
+        "pipenv run sphinx-build -b {} {} {}".format(
+            output.lower(), DOCS_DIR, DOCS_BUILD_DIR
+        )
+    )
     if output.lower() == "html":
         webbrowser.open(DOCS_INDEX.as_uri())
     elif output.lower() == "latex":

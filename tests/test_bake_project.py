@@ -92,11 +92,13 @@ def test_bake_with_defaults(cookies):
         assert "README.md" in found_toplevel_files
         assert "src" in found_toplevel_files
 
+
 def test_year_compute_in_license_file(cookies):
     with bake_in_temp_dir(cookies) as result:
         license_file_path = result.project.join("LICENSE")
         now = datetime.datetime.now()
         assert str(now.year) in license_file_path.read()
+
 
 def test_optional_pre_commit_linting(cookies):
     with bake_in_temp_dir(cookies) as result:
@@ -105,11 +107,14 @@ def test_optional_pre_commit_linting(cookies):
         assert config["husky"]["hooks"] == {"pre-commit": "yarn lint"}
 
     # Disable lint pre commit hook
-    with bake_in_temp_dir(cookies, extra_context=dict(pre_commit_linting="no")) as result:
+    with bake_in_temp_dir(
+        cookies, extra_context=dict(pre_commit_linting="no")
+    ) as result:
         package_json_file_path = result.project.join("package.json")
         config = json.loads(package_json_file_path.read())
         assert config["husky"]["hooks"] == {}
-        
+
+
 def test_treat_linter_warnings_as_errors(cookies):
     with bake_in_temp_dir(cookies) as result:
         package_json_file_path = result.project.join("package.json")
@@ -117,7 +122,9 @@ def test_treat_linter_warnings_as_errors(cookies):
         assert "--max-warnings=0" in config["scripts"]["lint"]
 
     # Disable treat_linter_warnings_as_errors
-    with bake_in_temp_dir(cookies, extra_context=dict(treat_lint_warnings_as_errors="no")) as result:
+    with bake_in_temp_dir(
+        cookies, extra_context=dict(treat_lint_warnings_as_errors="no")
+    ) as result:
         package_json_file_path = result.project.join("package.json")
         config = json.loads(package_json_file_path.read())
         assert "--max-warnings=-1" in config["scripts"]["lint"]
