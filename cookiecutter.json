@@ -1,0 +1,11 @@
+{
+    "full_name": "romnnn",
+    "email": "contact@romnn.com",
+    "github_username": "romnnn",
+    "project_name": "cookiecutter-webgl",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+    "version": "0.1.0",
+    "travis_plan": ["com", "org"],
+    "treat_lint_warnings_as_errors": ["yes", "no"],
+    "pre_commit_linting": ["yes", "no"]
+}

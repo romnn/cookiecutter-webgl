@@ -1,11 +1,33 @@
-language: node_js
+install: pip install --no-cache-dir -U tox-travis
+script: tox
+python:
+- 3.8
+- 3.7
+- 3.6
 
-install:
-  - yarn
-node_js:
-  - 12
-branches:
-  only:
-  - master
-script:
-  - yarn build
+jobs:
+  include:
+  - stage: deploy
+    name: "Deploy to GitHub Pages"
+    language: node_js
+    node_js:
+      - 12
+    install:
+      - yarn
+    before_script:
+      - pip install -U cookiecutter
+      - invoke generate
+      # - cookiecutter ./ --default-config
+    script: cd cookiecutter-webgl && yarn && yarn build && mkdir out && cp -r dist out/ && cp index.html out/ && touch out/.nojekyll
+    # - pipenv install --clear --dev --skip-lock
+    # python: 3.6
+    deploy:
+      provider: pages
+      local_dir: cookiecutter-webgl/out
+      skip_cleanup: true
+      # Generate a GitHub access token for public repositories
+      # In your travis ci settings, set the token as a secret environment variable $GH_TOKEN
+      token: "$GH_TOKEN"
+      keep_history: true
+      on:
+        branch: master

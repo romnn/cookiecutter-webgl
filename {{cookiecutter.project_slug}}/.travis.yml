@@ -1,0 +1,24 @@
+language: node_js
+install:
+  - yarn
+node_js: 12
+
+jobs:
+  include:
+  - stage: test
+    name: "Building project"
+    script: yarn build
+
+  - stage: deploy
+    name: "Deploy to GitHub Pages"
+    script: yarn build && mkdir out && cp -r dist out/ && cp index.html out/ && touch out/.nojekyll
+    deploy:
+      provider: pages
+      local_dir: out
+      skip_cleanup: true
+      # Generate a GitHub access token for public repositories
+      # In your travis ci settings, set the token as a secret environment variable $GH_TOKEN
+      token: "$GH_TOKEN"
+      keep_history: true
+      on:
+        branch: master
