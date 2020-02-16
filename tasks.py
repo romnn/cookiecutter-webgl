@@ -26,7 +26,7 @@ def generate(c):
     """
     Generate a default template
     """
-    c.run("pipenv run cookiecutter --default-config {}".format(ROOT_DIR))  # --no-input alternatively
+    c.run("pipenv run cookiecutter {} --no-input".format(ROOT_DIR))
 
 
 @task(help={'output': "Generated documentation output format (default is html)"})
