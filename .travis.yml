@@ -21,7 +21,7 @@ jobs:
       - echo $(python --version)
       # - python3.6 -m pip || wget -qO- https://bootstrap.pypa.io/get-pip.py | python3.6
       # - python3.6 -m pip install --user cookiecutter invoke npm-package-validator
-      - python3 -m pip install --user cookiecutter invoke npm-package-validator
+      - python3 -m pip install cookiecutter invoke npm-package-validator
       # - invoke generate
       # cookiecutter --default-config
       - python3 -m cookiecutter . --no-input
