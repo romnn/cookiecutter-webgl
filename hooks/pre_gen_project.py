@@ -6,16 +6,16 @@ try:
     from npm_package_validator import valid_new_package
     from npm_package_validator.validate import validate_package
 except ImportError:
-    print("Installing npm_package_validator...")
+    print("Installing npm-package-validator...")
     subprocess.check_output(
-        "python3 -m pip install --no-cache-dir npm_package_validator", stderr=subprocess.STDOUT, shell=True
+        "python3 -m pip install --no-cache-dir npm-package-validator", stderr=subprocess.STDOUT, shell=True
     )
 
     try:
         from npm_package_validator import valid_new_package
         from npm_package_validator.validate import validate_package
     except Exception:
-        print("Failed to install npm_package_validator to validate package name.")
+        print("Failed to install npm-package-validator to validate package name.")
         print("Aborting")
         sys.exit(1)
 
