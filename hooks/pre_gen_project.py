@@ -5,7 +5,7 @@ import subprocess
 try:
     from npm_package_validator import valid_new_package
     from npm_package_validator.validate import validate_package
-except (ImportError, ModuleNotFoundError):
+except ImportError:
     print("Installing npm_package_validator...")
     subprocess.check_output(
         "pip install --no-cache-dir npm_package_validator", stderr=subprocess.STDOUT, shell=True
