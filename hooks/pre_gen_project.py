@@ -23,9 +23,9 @@ package_name = "{{cookiecutter.project_slug}}"
 
 errors, warnings = validate_package(package_name)
 if not valid_new_package(package_name):
-    print(f"ERROR: The project slug ({package_name}) is not a valid npm package name.")
+    print("ERROR: The project slug ({}) is not a valid npm package name.".format(package_name))
     for issue in errors + warnings:
-        print(f"HINT: {issue}")
+        print("HINT: {}".format(issue))
 
     # Exit to cancel project creation
     sys.exit(1)
