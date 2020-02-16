@@ -8,7 +8,7 @@ try:
 except ImportError:
     print("Installing npm_package_validator...")
     subprocess.check_output(
-        "pip install --no-cache-dir npm_package_validator", stderr=subprocess.STDOUT, shell=True
+        "python3 -m pip install --no-cache-dir npm_package_validator", stderr=subprocess.STDOUT, shell=True
     )
 
     try:
