@@ -4,8 +4,8 @@
 Cookiecutter WebGL Template
 ===============================
 
-.. image:: https://travis-ci.com/romnn/cookiecutter-webgl.svg?branch=master
-    :target: https://travis-ci.com/romnn/cookiecutter-webgl
+.. image:: https://github.com/romnn/cookiecutter-webgl/workflows/test/badge.svg
+    :target: https://github.com/romnn/cookiecutter-webgl/actions
     :alt: Build status
 
 This ``cookiecutter`` templates a modern base project for
