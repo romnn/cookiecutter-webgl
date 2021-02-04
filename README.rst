@@ -7,9 +7,6 @@ Cookiecutter WebGL Template
 .. image:: https://travis-ci.com/romnn/cookiecutter-webgl.svg?branch=master
     :target: https://travis-ci.com/romnn/cookiecutter-webgl
     :alt: Build status
-.. image:: https://readthedocs.org/projects/romnn-cookiecutter-webgl/badge/?version=latest
-    :target: https://romnn-cookiecutter-webgl.readthedocs.io/en/latest/?badge=latest
-    :alt: Documentation Status
 
 This ``cookiecutter`` templates a modern base project for
 creating ``WebGL`` experiments with `three.js`_.
@@ -141,11 +138,3 @@ Credits
 .. _`mterczynski/typescript-webpack-threejs-template`: https://github.com/mterczynski/typescript-webpack-threejs-template
 .. _`vaneenige/webgl-structure`: https://github.com/vaneenige/webgl-structure
 .. _`python package template`: https://github.com/romnn/cookiecutter-pypackage
-
-Documentation
--------------
-
-If you need more guidance I encourage you to have a look at the
-`more extensive documentation`_.
-
-.. _`more extensive documentation`: https://cookiecutter-webgl.readthedocs.io/en/latest/
