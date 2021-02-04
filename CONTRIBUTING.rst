@@ -13,7 +13,7 @@ How can I contribute?
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/romnnn/cookiecutter-webgl/issues.
+Report bugs at https://github.com/romnn/cookiecutter-webgl/issues.
 
 If you are reporting a bug, please include:
 
@@ -43,7 +43,7 @@ articles, and such.
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to `file an issue <https://github.com/romnnn/cookiecutter-webgl/issues>`_ on GitHub.
+The best way to send feedback is to `file an issue <https://github.com/romnn/cookiecutter-webgl/issues>`_ on GitHub.
 
 If you are proposing a feature:
 
@@ -57,7 +57,7 @@ Get Started!
 
 Ready to contribute? Here's how to set up cookiecutter-webgl for local development.
 
-1. Fork the `cookiecutter-webgl repo <https://github.com/romnnn/cookiecutter-webgl>`_ on GitHub.
+1. Fork the `cookiecutter-webgl repo <https://github.com/romnn/cookiecutter-webgl>`_ on GitHub.
 2. Clone your fork locally::
 
     $ git clone git@github.com:your_name_here/cookiecutter-webgl.git
@@ -135,4 +135,4 @@ After merging the changes, tag your commits with a new version and push to GitHu
 $ bump2version (major | minor | patch)
 $ git push --tags
 
-.. _GitHub issues: https://github.com/romnnn/cookiecutter-webgl/issues
+.. _GitHub issues: https://github.com/romnn/cookiecutter-webgl/issues

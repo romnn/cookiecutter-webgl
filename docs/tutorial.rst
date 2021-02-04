@@ -4,7 +4,7 @@ Tutorial
 .. note:: Do you find any of these instructions confusing? `Edit this file`_
           and submit a pull request with your improvements!
 
-.. _`Edit this file`: https://github.com/romnnn/cookiecutter-webgl/blob/master/docs/tutorial.rst
+.. _`Edit this file`: https://github.com/romnn/cookiecutter-webgl/blob/master/docs/tutorial.rst
 
 To start with, you will need a `GitHub account`_.
 Create these before you get started on this tutorial.
@@ -35,7 +35,7 @@ Use cookiecutter, pointing it at the cookiecutter-webgl repo:
 
 .. code-block:: console
 
-    $ cookiecutter https://github.com/romnnn/cookiecutter-webgl.git
+    $ cookiecutter https://github.com/romnn/cookiecutter-webgl.git
 
 You'll be asked to enter a bunch of values to set the package up.
 If you don't know what to enter, stick with the defaults.

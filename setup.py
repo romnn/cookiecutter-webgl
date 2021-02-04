@@ -14,7 +14,7 @@ test_requirements = [
     "ruamel.yaml",
 ]
 coverage_requirements = ["coverage", "codecov"]
-docs_requirements = ["sphinx>=2.0", "romnnn_sphinx_press_theme", "sphinxemoji"]
+docs_requirements = ["sphinx>=2.0", "romnn_sphinx_press_theme", "sphinxemoji"]
 dev_requirements = ["invoke", "pre-commit", "cookiecutter", "npm_package_validator"]
 
 setup(
@@ -23,10 +23,10 @@ setup(
     python_requires=">=3.6",
     version=version,
     description="Cookiecutter template for webgl experiments",
-    author="romnnn",
+    author="romnn",
     license="BSD",
     author_email="contact@romnn.com",
-    url="https://github.com/romnnn/cookiecutter-webgl",
+    url="https://github.com/romnn/cookiecutter-webgl",
     keywords=["cookiecutter", "template", "webgl"],
     extras_require=dict(
         dev=dev_requirements

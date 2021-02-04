@@ -4,11 +4,11 @@
 Cookiecutter WebGL Template
 ===============================
 
-.. image:: https://travis-ci.com/romnnn/cookiecutter-webgl.svg?branch=master
-    :target: https://travis-ci.com/romnnn/cookiecutter-webgl
+.. image:: https://travis-ci.com/romnn/cookiecutter-webgl.svg?branch=master
+    :target: https://travis-ci.com/romnn/cookiecutter-webgl
     :alt: Build status
-.. image:: https://readthedocs.org/projects/romnnn-cookiecutter-webgl/badge/?version=latest
-    :target: https://romnnn-cookiecutter-webgl.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/romnn-cookiecutter-webgl/badge/?version=latest
+    :target: https://romnn-cookiecutter-webgl.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
 This ``cookiecutter`` templates a modern base project for
@@ -17,7 +17,7 @@ creating ``WebGL`` experiments with `three.js`_.
 It uses yarn_ and typescript_ with webpack_ and also includes
 common tools such as `dat.gui`_, `stats.js`_ or `Orbit Controls`_.
 
-See the generated template `in action <https://romnnn.github.io/cookiecutter-webgl/>`_. 
+See the generated template `in action <https://romnn.github.io/cookiecutter-webgl/>`_. 
 
 .. _three.js: https://threejs.org/
 .. _yarn: https://yarnpkg.com/
@@ -58,7 +58,7 @@ Install ``cookiecutter>=1.4.0`` if you haven't already::
 
 Generate your WebGL project (you will be asked for the project name etc)::
 
-    $ cookiecutter https://github.com/romnnn/cookiecutter-webgl.git
+    $ cookiecutter https://github.com/romnn/cookiecutter-webgl.git
 
 After your project was created:
 
@@ -140,7 +140,7 @@ Credits
 
 .. _`mterczynski/typescript-webpack-threejs-template`: https://github.com/mterczynski/typescript-webpack-threejs-template
 .. _`vaneenige/webgl-structure`: https://github.com/vaneenige/webgl-structure
-.. _`python package template`: https://github.com/romnnn/cookiecutter-pypackage
+.. _`python package template`: https://github.com/romnn/cookiecutter-pypackage
 
 Documentation
 -------------
